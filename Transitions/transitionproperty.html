@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transition Property.</title>
+    <style>
+        body{
+            background-color: rgb(3, 3, 65);
+        }
+        .box{
+            width: 600px;
+            height: 600px;
+            border: 5px solid rgb(246, 129, 149);
+            position:relative;
+            left: 32%;
+            top: 50px;
+            overflow: hidden;
+        }
+        .div-img{
+            width: 600px;
+            height: 600px;
+            
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        h3{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .para{
+            width: 600px;
+            height: 600px;
+            background-color: rgba(5, 200, 28,0.35);
+            position: absolute;
+            left: -100%;
+            top: 0px;
+            box-sizing: border-box;
+            padding: 10px;
+            text-align: justify;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: large;
+            color: black;
+            transition-duration: 2s;
+            transition-delay: 0.2s;
+        }
+        
+        .sphere1{
+            width:170px;
+            height:170px;
+            background-image:radial-gradient(rgb(244, 147, 186),rgb(119, 10, 110));
+            border-radius:50%;
+            position: absolute;
+            left:25%;
+        }
+        #sphere2{
+            position: absolute;
+            left: 28%;
+            top: 70%;
+        }
+        #sphere3{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            left: 7%;
+            top: 50%;
+        }
+        #sphere4{
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            left: 19%;
+            top: 40%;
+        }
+        #sphere5{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: -3%;
+            top: 80%;
+        }
+        #sphere6{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: -4%;
+            top: -4%;
+        }
+
+        :hover.div-img{
+            
+            .sphere1{
+                background-color: red;
+            }
+            body{
+                background-color: rgb(199, 199, 220);
+            }  
+        }
+
+        :hover.box{
+            .para{
+                position: absolute;
+                left: 0px;
+                top: 0px; 
+            }
+            .sphere1{
+                background-color: red;
+            } 
+            body{
+                background-color: blue;
+            }  
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sphere1" id="sphere1"></div>
+    <div class="sphere1" id="sphere3"></div>
+    <div class="sphere1" id="sphere4"></div>
+    <div class="sphere1" id="sphere5"></div>
+    <div class="sphere1" id="sphere6"></div>
+    <div class="sphere1" id="sphere7"></div>
+    <div class="sphere1" id="sphere8"></div>
+    <div class="box">
+        <div class="div-img">
+            <img src="lotus.jpeg" alt="">
+        </div>
+        <div class="para">
+            <h3>Lotus</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptates, maxime, tenetur sequi fugiat aliquam eligendi fugit autem magni officia, quo incidunt repellendus magnam at amet beatae! Saepe voluptate iste, eius aut vero necessitatibus, nam esse aspernatur dolorum dolore vel. Aliquam expedita aspernatur laudantium, aut inventore quis odio cum nesciunt illo ipsa, possimus, eaque libero sequi tenetur esse quisquam? Totam, perferendis! Ratione voluptatibus magnam necessitatibus enim suscipit illo, commodi voluptatum velit, quae atque minus totam sint eaque. Eligendi magni hic doloribus consequuntur non dolorem vero, nam vel, sed dolore quis cum eos sit, temporibus possimus eius facilis? Distinctio quidem molestias, amet praesentium veniam ut quaerat. Facilis beatae eligendi praesentium, cupiditate ab molestiae. Perspiciatis dicta laboriosam aliquid, rerum aperiam id dolore aut at deleniti voluptate nesciunt voluptatibus itaque hic ullam, velit possimus perferendis consequatur? Ipsam possimus nesciunt iure, ipsa nemo dolore! Atque repudiandae unde sint officiis.</p>
+        </div>
+    </div>
+    <div class="sphere1" id="sphere2"></div>
+</body>
+</html>
