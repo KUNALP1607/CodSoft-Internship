@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Form</title>
+    <script>
+        var customer, units;
+        function cal(){
+           customer=parseFloat(document.getElementById('customerNo').value);
+           units=parseFloat(document.getElementById('units').value);
+           var cal1, cal2;
+            if(0<=units){
+                if(0<=units && units<=100){
+                    cal1=(units*3.45)+(units*0.29);
+                }
+
+                else if(100<units && units<=300){
+                    cal1=((units-100)*7.43)+(3.45*100)+(units*0.29);
+                }
+
+                else if(300<units && units<=500){
+                    cal1=((units-300)*10.32)+(7.43*200)+(3.45*100)+(units*0.29);
+                }
+
+                else{
+                    cal1=((units-500)*11.71)+(10.32*200)+(7.43*200)+(3.45*100)+(units*0.29);
+                }
+
+                cal2=cal1+200+(0.16*cal1)+200;
+
+                alert("Your Billing Amount is "+cal2);
+            }
+            
+            else{
+                alert("Please enter valid No. of Units to get your Billing Amount.");
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            background-color:rgb(1, 1, 30);
+        }
+        .box1{
+            width:320px;
+            height:500px;
+            background-color: rgba(75, 74, 74, 0.4);
+            border-radius:3%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); <!-- doubt -->
+            backdrop-filter: blur(5px);
+            box-shadow: 0px 0px 50px 0.3px #0d0d0e;
+            color:aliceblue;
+            box-sizing: border-box;
+            padding: 30px;
+            
+        }
+        .box2{
+            width:170px;
+            height:170px;
+            background-image:linear-gradient(rgb(255,0,101),rgb(137,9,127));
+            border-radius:50%;
+            /* margin-left:515px; */
+            /* margin-top: 45px; */
+            margin-left:35%;
+            margin-top: 3%;
+        }
+        .box3{
+            width:170px;
+            height:170px;
+            background-image:linear-gradient(rgb(31, 5, 100),rgb(100, 98, 236));
+            border-radius:50%;
+            /* margin-left:790px;
+            margin-top: 260px; */
+            margin-left:53.8%;
+            margin-top: 18.5%;
+        }
+        p{
+            text-align:center;
+            font-size:230%;
+        }
+        .lable{
+            font-size: 130%;
+        }
+        input[type=text],[type=password]{
+            width: 100%;
+            padding: 12px 20px;/*yaha pe hamne do padding diye hai, pahila wala virtical (top,down) padding and dudsara wala horizontal (left,right) padding, type="submit" ke jaise type="text" and type="password me by default text ye center alignment me nahi reheta, so to give horizontal (left,right) padding, we have to use second padding i.e. horizontal (left,right) padding , and also to give required height, we can use first padding i.e. vertical (top,down) padding as well."*/
+            margin: 8px 0;
+            /* display: inline-block; */
+            background-color: rgba(75, 74, 74, 0.4);
+            color: white;
+            /* border: 1px solid #ccc; */
+            border-radius: 8px;
+            box-sizing: border-box; /* doubt */
+            border: none;
+        }
+        input[type=submit]{
+            width: 100%;
+            padding: 15px; /* yaha pe hamne pehele ke jaise do padding nahi dale, means pahila ek virtical (top-down) padding and dusara wala horizontal (left and right) padding, kyunki ye type="submit" hai, jisme text already center alignment me hi hota hai, hence for width=100% or any %, i.e. 20%,50%,etc., also if you are giving measurement of width in 'px' to that submit button, then no need of second padding i.e. left,right wala, because text is already in center, so padding kya hi karega us ext ko, and if we have to give required height, we can use first padding i.e.top,down wala, but when we haven't gave any width equal to 100%  or for any % i.e. 20%,50%,etc., or we haven't gave measurment in 'px' to width of that button, then we can use second padding, not to keep the text whithin the button some 'px' away from the border of the button, but for increase the width of the button, as we haven't gave any separate width in '%' or in 'px' to the submit button, and also we can use first padding to give required height to the same submit button.*/
+            margin: 15px 0px 30px 0px;
+            /* display: inline-block; */
+            background-color: white;
+            color: ;
+            /* border: 1px solid #ccc; */
+            border-radius: 8px;
+            box-sizing: border-box; /* doubt */
+            font-size: medium;
+            border: none;
+        }
+        .box4{
+            width: 50px;
+            height: 50px;
+            padding: 12px 20px;/*yaha pe hamne do padding diye hai, pahila wala virtical (top,down) padding and dudsara wala horizontal (left,right) padding, type="submit" ke jaise type="text" and type="password me by default text ye center alignment me nahi reheta, so to give horizontal (left,right) padding, we have to use second padding i.e. horizontal (left,right) padding , and also to give required height, we can use first padding i.e. vertical (top,down) padding as well."*/
+            margin: 0px 10px 0px 19px;
+            /* display: inline-block; */
+            background-color: rgba(75, 74, 74, 0.4);
+            color: white;
+            /* border: 1px solid #ccc; */
+            border-radius: 100%;
+            box-sizing: border-box; /* doubt */
+            border: none;
+        }
+        .box5{
+            width: 50px;
+            height: 50px;
+            padding: 12px 20px;/*yaha pe hamne do padding diye hai, pahila wala virtical (top,down) padding and dudsara wala horizontal (left,right) padding, type="submit" ke jaise type="text" and type="password me by default text ye center alignment me nahi reheta, so to give horizontal (left,right) padding, we have to use second padding i.e. horizontal (left,right) padding , and also to give required height, we can use first padding i.e. vertical (top,down) padding as well."*/
+            margin: 0px 10px 0px 10px;
+            /* display: inline-block; */
+            background-color: rgba(75, 74, 74, 0.4);
+            color: white;
+            /* border: 1px solid #ccc; */
+            border-radius: 50%;
+            box-sizing: border-box; /* doubt */
+            border: none;
+        }
+        .box6{
+            width: 50px;
+            height: 50px;
+            padding: 12px 20px;/*yaha pe hamne do padding diye hai, pahila wala virtical (top,down) padding and dudsara wala horizontal (left,right) padding, type="submit" ke jaise type="text" and type="password me by default text ye center alignment me nahi reheta, so to give horizontal (left,right) padding, we have to use second padding i.e. horizontal (left,right) padding , and also to give required height, we can use first padding i.e. vertical (top,down) padding as well."*/
+            margin: 0px 10px 0px 10px;
+            /* display: inline-block; */
+            background-color: rgba(75, 74, 74, 0.4);
+            color: white;
+            /* border: 1px solid #ccc; */
+            border-radius: 50%;
+            box-sizing: border-box; /* doubt */
+            border: none;
+        }
+        ul{
+            color : white;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+        }
+        h1{
+            color: rgb(11, 123, 221);
+            text-align: left;
+        }
+        li{
+            display: inline;
+            font-size: larger;
+            padding: 100px;
+        }
+        .navbar{
+            height: 100px;
+            background-color: rgb(3, 57, 57);
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        table{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- <div class="navbar">
+        <table>
+            <tr>
+                <th><h1>Login Form</h1></th>
+                <th colspan="2">
+                    <ul>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                        <li>Home</li>
+                    </ul>
+                </th>
+            </tr>
+        </table> -->
+        
+    </div>
+    
+    <div class="box1">
+        <p>Electricity Bill</p>
+        <form ><!-- doubt -->
+            <label class="lable" for="customer">Customer no.:</label><br>
+            <input id="customerNo" type="text" name="customer no." size="8" placeholder="Customer No." required ><!-- doubt -->
+            <br><br>
+            <label class="lable" for="Units">No. of Units used:</label><br>
+            <input id="units" type="text" name="Units" size="8" placeholder="Enter units given in electricity bill." required>
+            <input id="password" type="submit" value="Calculate" name="Login" onclick="cal()"><!-- doubt -->
+            <!-- <i class="fa-brands fa-google" style="font-size:60px;color:red;"></i> -->
+            <!-- <i class="fa fa-google" aria-hidden="true" style="color:white; font-size: 50px;"></i> -->
+            <!-- <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label> -->
+        </form>
+        <span class="box4"><i class="fa fa-google" aria-hidden="true" style="color:white; font-size: 20px;"></i></span>
+        <span class="box5"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+        <span class="box6"><i class="fa fa-lemon-o" aria-hidden="true"></i></span>
+    </div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>
